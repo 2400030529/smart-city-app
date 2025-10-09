@@ -1,0 +1,124 @@
+/* Navbar base */
+.nav-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #ffffffcc; /* translucent white */
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid #eef2f7;
+  z-index: 1000;
+}
+
+.nav-wrap {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #eef2ff;
+  border-radius: 8px;
+}
+
+.brand-text {
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.2px;
+}
+
+.nav-actions {
+  position: relative;
+}
+
+.avatar-btn {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.05s ease;
+}
+
+.avatar-btn:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.avatar-btn:active {
+  transform: translateY(1px);
+}
+
+/* Avatar initials when logged in */
+.avatar-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111827;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item.danger {
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .nav-wrap { padding: 0 12px; }
+  .brand-text { display: none; }
+  .dropdown { min-width: 170px; }
+}

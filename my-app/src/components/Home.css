@@ -47,6 +47,39 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Logged-in user info section */
+.user-info {
+  margin-top: 30px;
+}
+
+.user-info__content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.user-info__title {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  color: #111827;
+}
+
+.user-info__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 20px;
+  color: #334155;
+}
+
+.user-info__label {
+  font-weight: 600;
+  color: #1f2937;
+  margin-right: 6px;
+}
+
 /* Features Section */
 .features {
   display: flex;
@@ -136,5 +169,9 @@
 
   .cta h2 {
     font-size: 2rem;
+  }
+
+  .user-info__grid {
+    grid-template-columns: 1fr;
   }
 }
